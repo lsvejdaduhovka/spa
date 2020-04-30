@@ -8,6 +8,7 @@ exports.apiChat = function (req, res, obj) {
     } else if (req.pathname.endsWith("/add")) {
         let obj = {};
         obj.message = req.parameters.msg; //text zpravy z parametru msg
+        obj.nickname = req.parameters.nick;
         obj.time = dateFormat(new Date(), "dd.mm.yyyy HH:MM:ss");
         msgs.push(obj);
     }
